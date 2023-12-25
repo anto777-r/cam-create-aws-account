@@ -16,6 +16,10 @@ variable "root_email" {
 variable tags{
   type = map(string)
   description = "(Required) Tags for the resource"
+  default = {
+    param1 = "sdfsdf",
+    param2 = "sdfsfd"
+  }
 }
 
 variable AWS_ACCESS_KEY_ID {}
