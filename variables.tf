@@ -1,3 +1,5 @@
+
+
 variable "region" {
   type = string
   default = "us-east-1"
@@ -16,15 +18,26 @@ variable "root_email" {
 variable tags{
   type = map(string)
   description = "(Required) Tags for the resource"
-  default = {
-    param1 = "sdfsdf",
-    param2 = "sdfsfd"
-  }
 }
 
 variable monthly_budget {
   type = number
   default = 0
+}
+
+variable is_suspended {
+  type = bool
+  default = false
+}
+
+variable notification_email {
+  type = string
+  description = "Additional email where Budget Notifications are to be sent"
+}
+
+variable "parent_id" {
+  type = string
+  description = "(Required) Account Parent Organizational Unit"
 }
 
 variable AWS_ACCESS_KEY_ID {}
